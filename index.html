@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="id">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260925-05-46ec85d","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script><script src="/_sdk/6542d56fbfe7a3eb.telemetry_sdk.js" integrity="sha512-ECdM0nK7EkwDuOqho2qxgyRQXyBHk9hZqRKMBr+Xsu6zjeHlt+qkO2N2YRiHN7Kg4e1fEHDhjIp4bGJYVypv1g=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detektif Perisai Pancasila</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+        body { 
+            font-family: 'Alegreya Sans', sans-serif;
+            touch-action: manipulation;
+        }
+        .draggable {
+            cursor: grab;
+            user-select: none;
+        }
+        .draggable.dragging {
+            opacity: 0.5;
+            cursor: grabbing;
+        }
+        .drop-zone {
+            transition: all 0.2s;
+        }
+        .drop-zone.drag-over {
+            background-color: #fef3c7;
+            transform: scale(1.05);
+        }
+        .confetti {
+            animation: confetti-fall 1.5s ease-out forwards;
+        }
+        @keyframes confetti-fall {
+            from { transform: translateY(-100%) rotate(0deg); opacity: 1; }
+            to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        .pulse-success {
+            animation: pulse 0.5s ease-in-out;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .symbol-btn {
+            transition: transform 0.2s;
+        }
+        .symbol-btn:active {
+            transform: scale(0.95);
+        }
+        .modal-backdrop {
+            backdrop-filter: blur(4px);
+        }
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/6c2ecc939521f244.data_sdk.js" type="text/javascript" integrity="sha512-gRx8s+XsZDN6mSIQu2sivLZysbV0WHhb5kXNUWlgVb5lCMU1foJYukyMEDPv8Tnoocb8iwqB4XdRrWc7oEGzIQ=="></script>
+  <script src="/_sdk/ef0304cb8c7ed696.editing_sdk.js" type="text/javascript" integrity="sha512-kmL9L5Yuj57MQaequKbMA3aGpT/5lBUp10iGA3e3qnmMLs2ZZQ0poCcIfdd5rTgrhEvNPe4HK0ohePW7ZpgAFg=="></script>
+  <script src="/_sdk/ddcab3e45959c817.resizing_sdk.js" type="text/javascript" integrity="sha512-VAviUKfZVzugWBSeULYjSljTX+nb84wc6Zzbx5GQaQgh6X2ISSjXi8eIiCDGdwDh10esJMY0+QFQgUy9NcrTlQ=="></script>
+ </head>
+ <body data-template-id="__page-root" class="w-full min-h-screen overflow-x-hidden"><!-- Home Screen -->
+  <div id="home-screen" class="fade-in w-full min-h-screen flex flex-col items-center justify-center p-8">
+   <div data-template-id="home-container" class="canva-section text-center max-w-4xl w-full rounded-3xl shadow-2xl p-12">
+    <div class="mb-8">
+     <div class="text-8xl mb-4">
+      🛡️
+     </div>
+     <h1 data-template-id="game-title" class="canva-text font-bold mb-4"></h1>
+     <p data-template-id="game-subtitle" class="canva-text text-2xl mb-8"></p>
+     <div class="text-6xl mb-6">
+      🕵️
+     </div>
+     <p data-template-id="game-description" class="canva-text text-xl"></p>
+    </div><button data-template-id="start-button" class="canva-button px-12 py-6 text-2xl font-bold rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105" onclick="startGame()"> </button>
+   </div>
+  </div><!-- Level 1: Kenali Simbol -->
+  <div id="level1-screen" class="hidden fade-in w-full min-h-screen p-6">
+   <div class="max-w-6xl mx-auto"><!-- Header -->
+    <div class="flex justify-between items-center mb-6"><button data-template-id="home-btn" class="canva-button px-6 py-3 rounded-lg font-semibold flex items-center gap-2" onclick="goHome()"> <i data-lucide="home"></i> <span data-template-id="home-text" class="canva-text"></span> </button>
+     <div data-template-id="level1-indicator" class="canva-tag px-6 py-3 rounded-full font-bold text-xl"></div>
+    </div>
+    <h2 data-template-id="level1-title" class="canva-text text-center font-bold mb-8"></h2><!-- Garuda Display Area -->
+    <div data-template-id="garuda-container" class="canva-card rounded-2xl p-8 mb-6">
+     <p data-template-id="level1-instruction" class="canva-text text-center text-xl mb-6"></p><!-- Simplified Garuda with clickable symbols -->
+     <div class="relative max-w-2xl mx-auto">
+      <div class="grid grid-cols-1 gap-4"><button class="symbol-btn canva-card p-6 rounded-xl hover:shadow-lg transition-all" onclick="showSymbolDetail('bintang')">
+        <div class="text-6xl mb-2">
+         ⭐
+        </div><p data-template-id="symbol1-label" class="canva-text font-semibold"></p></button> <button class="symbol-btn canva-card p-6 rounded-xl hover:shadow-lg transition-all" onclick="showSymbolDetail('rantai')">
+        <div class="text-6xl mb-2">
+         ⛓️
+        </div><p data-template-id="symbol2-label" class="canva-text font-semibold"></p></button> <button class="symbol-btn canva-card p-6 rounded-xl hover:shadow-lg transition-all" onclick="showSymbolDetail('beringin')">
+        <div class="text-6xl mb-2">
+         🌳
+        </div><p data-template-id="symbol3-label" class="canva-text font-semibold"></p></button> <button class="symbol-btn canva-card p-6 rounded-xl hover:shadow-lg transition-all" onclick="showSymbolDetail('banteng')">
+        <div class="text-6xl mb-2">
+         🐂
+        </div><p data-template-id="symbol4-label" class="canva-text font-semibold"></p></button> <button class="symbol-btn canva-card p-6 rounded-xl hover:shadow-lg transition-all" onclick="showSymbolDetail('padi')">
+        <div class="text-6xl mb-2">
+         🌾
+        </div><p data-template-id="symbol5-label" class="canva-text font-semibold"></p></button>
+      </div>
+     </div>
+     <div class="text-center mt-6">
+      <p data-template-id="level1-progress" class="canva-text text-lg"></p>
+     </div>
+    </div><!-- Navigation -->
+    <div class="flex justify-center gap-4"><button data-template-id="level1-retry" class="canva-button px-8 py-4 rounded-lg font-semibold text-xl" onclick="resetLevel1()"></button> <button id="level1-next" data-template-id="level1-next" class="canva-button px-8 py-4 rounded-lg font-semibold text-xl opacity-50" onclick="goToLevel(2)" disabled></button>
+    </div>
+   </div>
+  </div><!-- Symbol Detail Modal -->
+  <div id="symbol-modal" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-6" onclick="closeModal(event)">
+   <div data-template-id="modal-container" class="canva-card rounded-3xl p-8 max-w-lg w-full shadow-2xl" onclick="event.stopPropagation()">
+    <div class="text-center">
+     <div id="modal-symbol" class="text-9xl mb-4"></div>
+     <h3 id="modal-name" data-template-id="modal-name" class="canva-text font-bold mb-2"></h3>
+     <p id="modal-sila" data-template-id="modal-sila" class="canva-text text-2xl mb-6"></p>
+     <div data-template-id="audio-indicator" class="canva-tag inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"><i data-lucide="volume-2"></i> <span data-template-id="audio-text" class="canva-text"></span>
+     </div><button data-template-id="modal-close" class="canva-button px-8 py-3 rounded-lg font-semibold text-xl" onclick="closeModal()"></button>
+    </div>
+   </div>
+  </div><!-- Level 2: Pasangkan Simbol -->
+  <div id="level2-screen" class="hidden fade-in w-full min-h-screen p-6">
+   <div class="max-w-6xl mx-auto">
+    <div class="flex justify-between items-center mb-6"><button data-template-id="home-btn-2" class="canva-button px-6 py-3 rounded-lg font-semibold flex items-center gap-2" onclick="goHome()"> <i data-lucide="home"></i> <span data-template-id="home-text-2" class="canva-text"></span> </button>
+     <div data-template-id="level2-indicator" class="canva-tag px-6 py-3 rounded-full font-bold text-xl"></div>
+    </div>
+    <h2 data-template-id="level2-title" class="canva-text text-center font-bold mb-8"></h2>
+    <p data-template-id="level2-instruction" class="canva-text text-center text-xl mb-8"></p>
+    <div class="grid md:grid-cols-2 gap-8"><!-- Draggable Symbols -->
+     <div data-template-id="symbols-container" class="canva-card rounded-2xl p-6">
+      <h3 data-template-id="symbols-header" class="canva-text font-bold text-xl mb-4"></h3>
+      <div id="draggable-symbols" class="space-y-4">
+       <div class="draggable canva-card p-4 rounded-xl flex items-center gap-4 cursor-grab" draggable="true" data-symbol="bintang">
+        <div class="text-5xl">
+         ⭐
+        </div><span data-template-id="drag-symbol1" class="canva-text font-semibold text-xl"></span>
+       </div>
+       <div class="draggable canva-card p-4 rounded-xl flex items-center gap-4 cursor-grab" draggable="true" data-symbol="rantai">
+        <div class="text-5xl">
+         ⛓️
+        </div><span data-template-id="drag-symbol2" class="canva-text font-semibold text-xl"></span>
+       </div>
+       <div class="draggable canva-card p-4 rounded-xl flex items-center gap-4 cursor-grab" draggable="true" data-symbol="beringin">
+        <div class="text-5xl">
+         🌳
+        </div><span data-template-id="drag-symbol3" class="canva-text font-semibold text-xl"></span>
+       </div>
+       <div class="draggable canva-card p-4 rounded-xl flex items-center gap-4 cursor-grab" draggable="true" data-symbol="banteng">
+        <div class="text-5xl">
+         🐂
+        </div><span data-template-id="drag-symbol4" class="canva-text font-semibold text-xl"></span>
+       </div>
+       <div class="draggable canva-card p-4 rounded-xl flex items-center gap-4 cursor-grab" draggable="true" data-symbol="padi">
+        <div class="text-5xl">
+         🌾
+        </div><span data-template-id="drag-symbol5" class="canva-text font-semibold text-xl"></span>
+       </div>
+      </div>
+     </div><!-- Drop Zones -->
+     <div data-template-id="sila-container" class="canva-card rounded-2xl p-6">
+      <h3 data-template-id="sila-header" class="canva-text font-bold text-xl mb-4"></h3>
+      <div class="space-y-4">
+       <div class="drop-zone canva-card p-4 rounded-xl border-4 border-dashed min-h-20 flex items-center justify-center" data-sila="1"><span data-template-id="sila1-label" class="canva-text font-semibold text-xl"></span>
+       </div>
+       <div class="drop-zone canva-card p-4 rounded-xl border-4 border-dashed min-h-20 flex items-center justify-center" data-sila="2"><span data-template-id="sila2-label" class="canva-text font-semibold text-xl"></span>
+       </div>
+       <div class="drop-zone canva-card p-4 rounded-xl border-4 border-dashed min-h-20 flex items-center justify-center" data-sila="3"><span data-template-id="sila3-label" class="canva-text font-semibold text-xl"></span>
+       </div>
+       <div class="drop-zone canva-card p-4 rounded-xl border-4 border-dashed min-h-20 flex items-center justify-center" data-sila="4"><span data-template-id="sila4-label" class="canva-text font-semibold text-xl"></span>
+       </div>
+       <div class="drop-zone canva-card p-4 rounded-xl border-4 border-dashed min-h-20 flex items-center justify-center" data-sila="5"><span data-template-id="sila5-label" class="canva-text font-semibold text-xl"></span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div id="level2-feedback" class="text-center mt-6 min-h-12"></div>
+    <div class="flex justify-center gap-4 mt-6"><button data-template-id="level2-retry" class="canva-button px-8 py-4 rounded-lg font-semibold text-xl" onclick="resetLevel2()"></button> <button id="level2-next" data-template-id="level2-next" class="canva-button px-8 py-4 rounded-lg font-semibold text-xl opacity-50" onclick="goToLevel(3)" disabled></button>
+    </div>
+   </div>
+  </div><!-- Level 3: Susun Perisai Garuda -->
+  <div id="level3-screen" class="hidden fade-in w-full min-h-screen p-6">
+   <div class="max-w-6xl mx-auto">
+    <div class="flex justify-between items-center mb-6"><button data-template-id="home-btn-3" class="canva-button px-6 py-3 rounded-lg font-semibold flex items-center gap-2" onclick="goHome()"> <i data-lucide="home"></i> <span data-template-id="home-text-3" class="canva-text"></span> </button>
+     <div data-template-id="level3-indicator" class="canva-tag px-6 py-3 rounded-full font-bold text-xl"></div>
+    </div>
+    <h2 data-template-id="level3-title" class="canva-text text-center font-bold mb-8"></h2>
+    <p data-template-id="level3-instruction" class="canva-text text-center text-xl mb-8"></p><!-- Shield with slots -->
+    <div data-template-id="shield-container" class="canva-card rounded-2xl p-8 max-w-2xl mx-auto mb-6">
+     <div class="grid grid-cols-1 gap-4">
+      <div class="shield-slot drop-zone canva-card p-6 rounded-xl border-4 border-dashed flex items-center justify-center min-h-24" data-slot="1"><span data-template-id="slot1-label" class="canva-text font-semibold text-xl"></span>
+      </div>
+      <div class="shield-slot drop-zone canva-card p-6 rounded-xl border-4 border-dashed flex items-center justify-center min-h-24" data-slot="2"><span data-template-id="slot2-label" class="canva-text font-semibold text-xl"></span>
+      </div>
+      <div class="shield-slot drop-zone canva-card p-6 rounded-xl border-4 border-dashed flex items-center justify-center min-h-24" data-slot="3"><span data-template-id="slot3-label" class="canva-text font-semibold text-xl"></span>
+      </div>
+      <div class="shield-slot drop-zone canva-card p-6 rounded-xl border-4 border-dashed flex items-center justify-center min-h-24" data-slot="4"><span data-template-id="slot4-label" class="canva-text font-semibold text-xl"></span>
+      </div>
+      <div class="shield-slot drop-zone canva-card p-6 rounded-xl border-4 border-dashed flex items-center justify-center min-h-24" data-slot="5"><span data-template-id="slot5-label" class="canva-text font-semibold text-xl"></span>
+      </div>
+     </div>
+    </div><!-- Symbol Tray -->
+    <div data-template-id="tray-container" class="canva-card rounded-2xl p-6 max-w-2xl mx-auto">
+     <h3 data-template-id="tray-header" class="canva-text font-bold text-xl mb-4 text-center"></h3>
+     <div id="symbol-tray" class="flex flex-wrap justify-center gap-4">
+      <div class="draggable canva-card p-4 rounded-xl cursor-grab" draggable="true" data-symbol="bintang">
+       <div class="text-6xl">
+        ⭐
+       </div>
+      </div>
+      <div class="draggable canva-card p-4 rounded-xl cursor-grab" draggable="true" data-symbol="rantai">
+       <div class="text-6xl">
+        ⛓️
+       </div>
+      </div>
+      <div class="draggable canva-card p-4 rounded-xl cursor-grab" draggable="true" data-symbol="beringin">
+       <div class="text-6xl">
+        🌳
+       </div>
+      </div>
+      <div class="draggable canva-card p-4 rounded-xl cursor-grab" draggable="true" data-symbol="banteng">
+       <div class="text-6xl">
+        🐂
+       </div>
+      </div>
+      <div class="draggable canva-card p-4 rounded-xl cursor-grab" draggable="true" data-symbol="padi">
+       <div class="text-6xl">
+        🌾
+       </div>
+      </div>
+     </div>
+    </div>
+    <div id="level3-feedback" class="text-center mt-6 min-h-12"></div>
+    <div class="flex justify-center gap-4 mt-6"><button data-template-id="level3-retry" class="canva-button px-8 py-4 rounded-lg font-semibold text-xl" onclick="resetLevel3()"></button> <button id="level3-next" data-template-id="level3-next" class="canva-button px-8 py-4 rounded-lg font-semibold text-xl opacity-50" onclick="goToLevel(4)" disabled></button>
+    </div>
+   </div>
+  </div><!-- Success Animation Container -->
+  <div id="confetti-container" class="fixed inset-0 pointer-events-none z-40"></div><!-- Level 4: Detektif Kesalahan -->
+  <div id="level4-screen" class="hidden fade-in w-full min-h-screen p-6">
+   <div class="max-w-6xl mx-auto">
+    <div class="flex justify-between items-center mb-6"><button data-template-id="home-btn-4" class="canva-button px-6 py-3 rounded-lg font-semibold flex items-center gap-2" onclick="goHome()"> <i data-lucide="home"></i> <span data-template-id="home-text-4" class="canva-text"></span> </button>
+     <div data-template-id="level4-indicator" class="canva-tag px-6 py-3 rounded-full font-bold text-xl"></div>
+    </div>
+    <h2 data-template-id="level4-title" class="canva-text text-center font-bold mb-8"></h2>
+    <p data-template-id="level4-instruction" class="canva-text text-center text-xl mb-8"></p>
+    <div id="error-detection-container" class="max-w-3xl mx-auto"><!-- Quiz container will be populated by JS -->
+    </div>
+    <div class="flex justify-center gap-4 mt-8"><button id="level4-next" data-template-id="level4-next" class="canva-button px-8 py-4 rounded-lg font-semibold text-xl opacity-50" onclick="goToLevel(5)" disabled></button>
+    </div>
+   </div>
+  </div><!-- Level 5: Pancasila dalam Kehidupanku -->
+  <div id="level5-screen" class="hidden fade-in w-full min-h-screen p-6">
+   <div class="max-w-6xl mx-auto">
+    <div class="flex justify-between items-center mb-6"><button data-template-id="home-btn-5" class="canva-button px-6 py-3 rounded-lg font-semibold flex items-center gap-2" onclick="goHome()"> <i data-lucide="home"></i> <span data-template-id="home-text-5" class="canva-text"></span> </button>
+     <div data-template-id="level5-indicator" class="canva-tag px-6 py-3 rounded-full font-bold text-xl"></div>
+    </div>
+    <h2 data-template-id="level5-title" class="canva-text text-center font-bold mb-8"></h2>
+    <p data-template-id="level5-instruction" class="canva-text text-center text-xl mb-8"></p>
+    <div id="situation-container" class="grid md:grid-cols-2 gap-6"><!-- Situations will be populated by JS -->
+    </div>
+    <div class="flex justify-center gap-4 mt-8"><button id="level5-next" data-template-id="level5-next" class="canva-button px-8 py-4 rounded-lg font-semibold text-xl opacity-50" onclick="goToLevel(6)" disabled></button>
+    </div>
+   </div>
+  </div><!-- Level 6: Bonus - Tebak Simbol -->
+  <div id="level6-screen" class="hidden fade-in w-full min-h-screen p-6">
+   <div class="max-w-6xl mx-auto">
+    <div class="flex justify-between items-center mb-6"><button data-template-id="home-btn-6" class="canva-button px-6 py-3 rounded-lg font-semibold flex items-center gap-2" onclick="goHome()"> <i data-lucide="home"></i> <span data-template-id="home-text-6" class="canva-text"></span> </button>
+     <div data-template-id="level6-indicator" class="canva-tag px-6 py-3 rounded-full font-bold text-xl"></div>
+    </div>
+    <h2 data-template-id="level6-title" class="canva-text text-center font-bold mb-8"></h2>
+    <p data-template-id="level6-instruction" class="canva-text text-center text-xl mb-8"></p>
+    <div id="bonus-container" class="max-w-3xl mx-auto"><!-- Bonus quiz will be populated by JS -->
+    </div>
+    <div class="flex justify-center gap-4 mt-8"><button id="level6-next" data-template-id="level6-next" class="canva-button px-8 py-4 rounded-lg font-semibold text-xl opacity-50" onclick="showResults()" disabled></button>
+    </div>
+   </div>
+  </div><!-- Results Screen -->
+  <div id="results-screen" class="hidden fade-in w-full min-h-screen p-6">
+   <div class="max-w-4xl mx-auto">
+    <div data-template-id="results-container" class="canva-card rounded-3xl p-12 text-center">
+     <div class="text-8xl mb-6">
+      🏆
+     </div>
+     <h2 data-template-id="results-title" class="canva-text font-bold mb-6"></h2>
+     <div id="score-display" class="text-6xl font-bold mb-4"></div>
+     <div id="rank-display" class="text-3xl mb-8"></div><!-- Reflection -->
+     <div data-template-id="reflection-container" class="canva-section rounded-2xl p-8 mb-8 text-left">
+      <h3 data-template-id="reflection-title" class="canva-text font-bold text-2xl mb-6 text-center"></h3>
+      <div class="mb-6">
+       <p data-template-id="feeling-question" class="canva-text font-semibold text-xl mb-4"></p>
+       <div class="flex justify-center gap-6"><button class="feeling-btn text-6xl p-4 rounded-xl transition-all hover:scale-110" data-feeling="happy" onclick="selectFeeling('happy')">😊</button> <button class="feeling-btn text-6xl p-4 rounded-xl transition-all hover:scale-110" data-feeling="neutral" onclick="selectFeeling('neutral')">😐</button> <button class="feeling-btn text-6xl p-4 rounded-xl transition-all hover:scale-110" data-feeling="thinking" onclick="selectFeeling('thinking')">🤔</button>
+       </div>
+      </div>
+      <div class="mb-6">
+       <p data-template-id="symbol-question" class="canva-text font-semibold text-xl mb-4"></p>
+       <div class="flex flex-wrap justify-center gap-4"><button class="symbol-recall-btn canva-card p-4 rounded-xl text-4xl transition-all hover:scale-110" data-symbol="bintang" onclick="selectSymbol('bintang')">⭐</button> <button class="symbol-recall-btn canva-card p-4 rounded-xl text-4xl transition-all hover:scale-110" data-symbol="rantai" onclick="selectSymbol('rantai')">⛓️</button> <button class="symbol-recall-btn canva-card p-4 rounded-xl text-4xl transition-all hover:scale-110" data-symbol="beringin" onclick="selectSymbol('beringin')">🌳</button> <button class="symbol-recall-btn canva-card p-4 rounded-xl text-4xl transition-all hover:scale-110" data-symbol="banteng" onclick="selectSymbol('banteng')">🐂</button> <button class="symbol-recall-btn canva-card p-4 rounded-xl text-4xl transition-all hover:scale-110" data-symbol="padi" onclick="selectSymbol('padi')">🌾</button>
+       </div>
+      </div>
+      <div>
+       <p data-template-id="action-question" class="canva-text font-semibold text-xl mb-4"></p>
+       <p data-template-id="action-hint" class="canva-text text-lg mb-4"></p>
+      </div>
+     </div>
+     <div class="flex justify-center gap-4"><button data-template-id="play-again-btn" class="canva-button px-10 py-5 rounded-xl font-bold text-2xl" onclick="resetGame()"></button> <button data-template-id="finish-btn" class="canva-button px-10 py-5 rounded-xl font-bold text-2xl" onclick="goHome()"></button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+        // Game State
+        let currentLevel = 0;
+        let level1Explored = new Set();
+        let level2Matches = 0;
+        let level3Placed = 0;
+        let level4Progress = 0;
+        let level5Progress = 0;
+        let level6Progress = 0;
+        let totalScore = 0;
+
+        // Symbol mapping
+        const symbolData = {
+            bintang: { emoji: '⭐', name: 'Bintang', sila: 1, silaText: 'Sila ke-1' },
+            rantai: { emoji: '⛓️', name: 'Rantai', sila: 2, silaText: 'Sila ke-2' },
+            beringin: { emoji: '🌳', name: 'Pohon Beringin', sila: 3, silaText: 'Sila ke-3' },
+            banteng: { emoji: '🐂', name: 'Kepala Banteng', sila: 4, silaText: 'Sila ke-4' },
+            padi: { emoji: '🌾', name: 'Padi dan Kapas', sila: 5, silaText: 'Sila ke-5' }
+        };
+
+        // Level 4 quiz data
+        const level4Quizzes = [
+            {
+                shields: [
+                    { slot: 1, symbol: 'beringin' },
+                    { slot: 2, symbol: 'rantai' },
+                    { slot: 3, symbol: 'bintang' },
+                    { slot: 4, symbol: 'banteng' },
+                    { slot: 5, symbol: 'padi' }
+                ],
+                correct: false,
+                explanation: 'Bintang harus di posisi 1, Pohon Beringin harus di posisi 3'
+            },
+            {
+                shields: [
+                    { slot: 1, symbol: 'bintang' },
+                    { slot: 2, symbol: 'banteng' },
+                    { slot: 3, symbol: 'beringin' },
+                    { slot: 4, symbol: 'rantai' },
+                    { slot: 5, symbol: 'padi' }
+                ],
+                correct: false,
+                explanation: 'Rantai harus di posisi 2, Kepala Banteng harus di posisi 4'
+            },
+            {
+                shields: [
+                    { slot: 1, symbol: 'bintang' },
+                    { slot: 2, symbol: 'rantai' },
+                    { slot: 3, symbol: 'beringin' },
+                    { slot: 4, symbol: 'banteng' },
+                    { slot: 5, symbol: 'padi' }
+                ],
+                correct: true,
+                explanation: 'Hebat! Semua simbol sudah benar!'
+            }
+        ];
+
+        // Level 5 situations
+        const situations = [
+            { id: 1, situation: 'Anak berdoa sebelum belajar', correctSymbol: 'bintang', image: '🙏' },
+            { id: 2, situation: 'Anak membantu teman yang kesulitan', correctSymbol: 'rantai', image: '🤝' },
+            { id: 3, situation: 'Anak bermain bersama tanpa membeda-bedakan teman', correctSymbol: 'beringin', image: '👦👧' },
+            { id: 4, situation: 'Anak berdiskusi untuk menentukan permainan bersama', correctSymbol: 'banteng', image: '💬' },
+            { id: 5, situation: 'Anak berbagi makanan dengan teman', correctSymbol: 'padi', image: '🍎' }
+        ];
+
+        // Level 6 bonus questions
+        const bonusQuestions = [
+            { symbol: 'bintang', hint: 'Simbol ini berbentuk bintang bersudut lima...', options: ['Bintang', 'Rantai', 'Pohon Beringin', 'Kepala Banteng'] },
+            { symbol: 'rantai', hint: 'Simbol ini seperti mata rantai yang saling terhubung...', options: ['Bintang', 'Rantai', 'Pohon Beringin', 'Padi dan Kapas'] },
+            { symbol: 'beringin', hint: 'Simbol ini adalah pohon besar yang rindang...', options: ['Rantai', 'Pohon Beringin', 'Kepala Banteng', 'Padi dan Kapas'] },
+            { symbol: 'banteng', hint: 'Simbol ini adalah kepala hewan berkaki empat...', options: ['Bintang', 'Pohon Beringin', 'Kepala Banteng', 'Padi dan Kapas'] },
+            { symbol: 'padi', hint: 'Simbol ini adalah tanaman pangan...', options: ['Bintang', 'Rantai', 'Kepala Banteng', 'Padi dan Kapas'] }
+        ];
+
+        function startGame() {
+            document.getElementById('home-screen').classList.add('hidden');
+            goToLevel(1);
+        }
+
+        function goHome() {
+            document.querySelectorAll('[id$="-screen"]').forEach(el => el.classList.add('hidden'));
+            document.getElementById('home-screen').classList.remove('hidden');
+            resetGame();
+        }
+
+        function goToLevel(level) {
+            document.querySelectorAll('[id$="-screen"]').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`level${level}-screen`).classList.remove('hidden');
+            currentLevel = level;
+            
+            if (level === 2) initLevel2();
+            if (level === 3) initLevel3();
+            if (level === 4) initLevel4();
+            if (level === 5) initLevel5();
+            if (level === 6) initLevel6();
+            
+            lucide.createIcons();
+        }
+
+        function showSymbolDetail(symbolKey) {
+            const data = symbolData[symbolKey];
+            const modal = document.getElementById('symbol-modal');
+            document.getElementById('modal-symbol').textContent = data.emoji;
+            document.getElementById('modal-name').textContent = data.name;
+            document.getElementById('modal-sila').textContent = data.silaText;
+            modal.classList.remove('hidden');
+            
+            level1Explored.add(symbolKey);
+            updateLevel1Progress();
+        }
+
+        function closeModal(event) {
+            if (event && event.target !== event.currentTarget) return;
+            document.getElementById('symbol-modal').classList.add('hidden');
+        }
+
+        function updateLevel1Progress() {
+            const progress = document.querySelector('[data-template-id="level1-progress"]');
+            progress.textContent = `Simbol yang sudah kamu lihat: ${level1Explored.size}/5`;
+            
+            if (level1Explored.size >= 3) {
+                const nextBtn = document.getElementById('level1-next');
+                nextBtn.disabled = false;
+                nextBtn.classList.remove('opacity-50');
+            }
+        }
+
+        function resetLevel1() {
+            level1Explored.clear();
+            updateLevel1Progress();
+            document.getElementById('level1-next').disabled = true;
+            document.getElementById('level1-next').classList.add('opacity-50');
+        }
+
+        // Level 2: Drag and Drop
+        function initLevel2() {
+            level2Matches = 0;
+            const draggables = document.querySelectorAll('#level2-screen .draggable');
+            const dropZones = document.querySelectorAll('#level2-screen .drop-zone');
+            
+            draggables.forEach(draggable => {
+                draggable.addEventListener('dragstart', e => {
+                    e.dataTransfer.setData('symbol', e.target.dataset.symbol);
+                    e.target.classList.add('dragging');
+                });
+                draggable.addEventListener('dragend', e => {
+                    e.target.classList.remove('dragging');
+                });
+            });
+            
+            dropZones.forEach(zone => {
+                zone.addEventListener('dragover', e => {
+                    e.preventDefault();
+                    zone.classList.add('drag-over');
+                });
+                zone.addEventListener('dragleave', () => {
+                    zone.classList.remove('drag-over');
+                });
+                zone.addEventListener('drop', e => {
+                    e.preventDefault();
+                    zone.classList.remove('drag-over');
+                    const symbol = e.dataTransfer.getData('symbol');
+                    const sila = zone.dataset.sila;
+                    checkLevel2Match(symbol, sila, zone);
+                });
+            });
+        }
+
+        function checkLevel2Match(symbol, sila, zone) {
+            const feedback = document.getElementById('level2-feedback');
+            const data = symbolData[symbol];
+            
+            if (data.sila === parseInt(sila)) {
+                zone.innerHTML = `<div class="pulse-success flex items-center gap-3">
+                    <div class="text-5xl">${data.emoji}</div>
+                    <div class="text-3xl">⭐</div>
+                </div>`;
+                feedback.innerHTML = `<p class="text-2xl font-bold" style="color: #16a34a;">Hebat! ${data.name} untuk ${data.silaText}!</p>`;
+                level2Matches++;
+                
+                if (level2Matches === 5) {
+                    setTimeout(() => {
+                        const nextBtn = document.getElementById('level2-next');
+                        nextBtn.disabled = false;
+                        nextBtn.classList.remove('opacity-50');
+                        totalScore += 20;
+                    }, 500);
+                }
+            } else {
+                feedback.innerHTML = `<p class="text-2xl font-bold" style="color: #dc2626;">Coba lagi! Perhatikan nomor silanya.</p>`;
+            }
+        }
+
+        function resetLevel2() {
+            level2Matches = 0;
+            document.getElementById('level2-feedback').innerHTML = '';
+            document.getElementById('level2-next').disabled = true;
+            document.getElementById('level2-next').classList.add('opacity-50');
+            document.querySelectorAll('#level2-screen .drop-zone').forEach(zone => {
+                const sila = zone.dataset.sila;
+                zone.innerHTML = `<span class="canva-text font-semibold text-xl">Sila ke-${sila}</span>`;
+            });
+        }
+
+        // Level 3: Shield Assembly
+        function initLevel3() {
+            level3Placed = 0;
+            const draggables = document.querySelectorAll('#level3-screen .draggable');
+            const dropZones = document.querySelectorAll('#level3-screen .shield-slot');
+            
+            draggables.forEach(draggable => {
+                draggable.addEventListener('dragstart', e => {
+                    e.dataTransfer.setData('symbol', e.target.dataset.symbol);
+                    e.target.classList.add('dragging');
+                });
+                draggable.addEventListener('dragend', e => {
+                    e.target.classList.remove('dragging');
+                });
+            });
+            
+            dropZones.forEach(zone => {
+                zone.addEventListener('dragover', e => {
+                    e.preventDefault();
+                    zone.classList.add('drag-over');
+                });
+                zone.addEventListener('dragleave', () => {
+                    zone.classList.remove('drag-over');
+                });
+                zone.addEventListener('drop', e => {
+                    e.preventDefault();
+                    zone.classList.remove('drag-over');
+                    const symbol = e.dataTransfer.getData('symbol');
+                    const slot = zone.dataset.slot;
+                    checkLevel3Placement(symbol, slot, zone);
+                });
+            });
+        }
+
+        function checkLevel3Placement(symbol, slot, zone) {
+            const feedback = document.getElementById('level3-feedback');
+            const data = symbolData[symbol];
+            
+            if (data.sila === parseInt(slot)) {
+                zone.innerHTML = `<div class="pulse-success text-7xl">${data.emoji}</div>`;
+                zone.classList.add('border-green-500');
+                level3Placed++;
+                
+                const draggable = document.querySelector(`#level3-screen .draggable[data-symbol="${symbol}"]`);
+                if (draggable) draggable.remove();
+                
+                if (level3Placed === 5) {
+                    showConfetti();
+                    feedback.innerHTML = `<p class="text-3xl font-bold" style="color: #16a34a;">🎉 Hebat! Kamu berhasil menyusun Perisai Pancasila! 🎉</p>`;
+                    setTimeout(() => {
+                        const nextBtn = document.getElementById('level3-next');
+                        nextBtn.disabled = false;
+                        nextBtn.classList.remove('opacity-50');
+                        totalScore += 20;
+                    }, 1000);
+                }
+            } else {
+                feedback.innerHTML = `<p class="text-2xl font-bold" style="color: #dc2626;">Coba lagi! ${data.name} bukan untuk posisi ini.</p>`;
+                setTimeout(() => feedback.innerHTML = '', 2000);
+            }
+        }
+
+        function resetLevel3() {
+            level3Placed = 0;
+            document.getElementById('level3-feedback').innerHTML = '';
+            document.getElementById('level3-next').disabled = true;
+            document.getElementById('level3-next').classList.add('opacity-50');
+            
+            document.querySelectorAll('#level3-screen .shield-slot').forEach((zone, i) => {
+                zone.classList.remove('border-green-500');
+                zone.innerHTML = `<span class="canva-text font-semibold text-xl">Posisi ${i + 1}</span>`;
+            });
+            
+            const tray = document.getElementById('symbol-tray');
+            tray.innerHTML = `
+                <div class="draggable canva-card p-4 rounded-xl cursor-grab" draggable="true" data-symbol="bintang"><div class="text-6xl">⭐</div></div>
+                <div class="draggable canva-card p-4 rounded-xl cursor-grab" draggable="true" data-symbol="rantai"><div class="text-6xl">⛓️</div></div>
+                <div class="draggable canva-card p-4 rounded-xl cursor-grab" draggable="true" data-symbol="beringin"><div class="text-6xl">🌳</div></div>
+                <div class="draggable canva-card p-4 rounded-xl cursor-grab" draggable="true" data-symbol="banteng"><div class="text-6xl">🐂</div></div>
+                <div class="draggable canva-card p-4 rounded-xl cursor-grab" draggable="true" data-symbol="padi"><div class="text-6xl">🌾</div></div>
+            `;
+            initLevel3();
+        }
+
+        function showConfetti() {
+            const container = document.getElementById('confetti-container');
+            for (let i = 0; i < 30; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti fixed text-4xl';
+                confetti.textContent = ['⭐', '🎉', '✨'][Math.floor(Math.random() * 3)];
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.top = '-10%';
+                confetti.style.animationDelay = Math.random() * 0.5 + 's';
+                container.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 1500);
+            }
+        }
+
+        // Level 4: Error Detection
+        function initLevel4() {
+            level4Progress = 0;
+            const container = document.getElementById('error-detection-container');
+            container.innerHTML = '';
+            
+            level4Quizzes.forEach((quiz, idx) => {
+                const quizEl = document.createElement('div');
+                quizEl.className = 'canva-card rounded-2xl p-6 mb-6';
+                quizEl.innerHTML = `
+                    <h4 class="text-xl font-bold mb-4">Perisai ${idx + 1}</h4>
+                    <div class="grid grid-cols-1 gap-2 mb-4">
+                        ${quiz.shields.map(s => `
+                            <div class="flex items-center gap-3 p-3 bg-white rounded-lg">
+                                <span class="font-semibold">Posisi ${s.slot}:</span>
+                                <div class="text-4xl">${symbolData[s.symbol].emoji}</div>
+                                <span>${symbolData[s.symbol].name}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <p class="font-semibold text-lg mb-4">Apakah susunan ini sudah benar?</p>
+                    <div class="flex gap-4 mb-4">
+                        <button class="canva-button px-6 py-3 rounded-lg font-semibold flex-1" 
+                                onclick="checkLevel4Answer(${idx}, true)" style="background: #16a34a; color: white;">BENAR</button>
+                        <button class="canva-button px-6 py-3 rounded-lg font-semibold flex-1" 
+                                onclick="checkLevel4Answer(${idx}, false)" style="background: #dc2626; color: white;">PERBAIKI</button>
+                    </div>
+                    <div id="quiz-${idx}-feedback" class="min-h-12"></div>
+                `;
+                container.appendChild(quizEl);
+            });
+        }
+
+        function checkLevel4Answer(quizIdx, userSaysCorrect) {
+            const quiz = level4Quizzes[quizIdx];
+            const feedback = document.getElementById(`quiz-${quizIdx}-feedback`);
+            
+            if ((quiz.correct && userSaysCorrect) || (!quiz.correct && !userSaysCorrect)) {
+                feedback.innerHTML = `<p class="text-xl font-bold" style="color: #16a34a;">✓ ${quiz.explanation}</p>`;
+                level4Progress++;
+                totalScore += 6;
+            } else {
+                feedback.innerHTML = `<p class="text-xl font-bold" style="color: #dc2626;">Coba perhatikan lagi! ${quiz.explanation}</p>`;
+            }
+            
+            if (level4Progress >= 3) {
+                setTimeout(() => {
+                    const nextBtn = document.getElementById('level4-next');
+                    nextBtn.disabled = false;
+                    nextBtn.classList.remove('opacity-50');
+                }, 500);
+            }
+        }
+
+        // Level 5: Real-life Situations
+        function initLevel5() {
+            level5Progress = 0;
+            const container = document.getElementById('situation-container');
+            container.innerHTML = '';
+            
+            situations.forEach(sit => {
+                const sitEl = document.createElement('div');
+                sitEl.className = 'canva-card rounded-2xl p-6';
+                sitEl.innerHTML = `
+                    <div class="text-6xl mb-4 text-center">${sit.image}</div>
+                    <p class="font-semibold text-xl mb-4 text-center">${sit.situation}</p>
+                    <p class="text-lg mb-4 text-center">Pilih simbol yang sesuai:</p>
+                    <div class="flex flex-wrap justify-center gap-3 mb-4">
+                        ${Object.keys(symbolData).map(key => `
+                            <button class="situation-choice canva-card p-3 rounded-lg text-4xl hover:scale-110 transition-all" 
+                                    onclick="checkLevel5Answer(${sit.id}, '${key}')" data-symbol="${key}">
+                                ${symbolData[key].emoji}
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div id="situation-${sit.id}-feedback" class="min-h-12 text-center"></div>
+                `;
+                container.appendChild(sitEl);
+            });
+        }
+
+        function checkLevel5Answer(sitId, chosenSymbol) {
+            const situation = situations.find(s => s.id === sitId);
+            const feedback = document.getElementById(`situation-${sitId}-feedback`);
+            const data = symbolData[chosenSymbol];
+            
+            if (chosenSymbol === situation.correctSymbol) {
+                feedback.innerHTML = `<p class="text-xl font-bold" style="color: #16a34a;">✓ Tepat sekali! ${data.name} cocok untuk situasi ini.</p>`;
+                level5Progress++;
+                totalScore += 6;
+            } else {
+                feedback.innerHTML = `<p class="text-xl font-bold" style="color: #f59e0b;">Boleh juga! Tapi coba pikirkan lagi, simbol mana yang paling tepat?</p>`;
+            }
+            
+            if (level5Progress >= 5) {
+                setTimeout(() => {
+                    const nextBtn = document.getElementById('level5-next');
+                    nextBtn.disabled = false;
+                    nextBtn.classList.remove('opacity-50');
+                }, 500);
+            }
+        }
+
+        // Level 6: Bonus Quiz
+        function initLevel6() {
+            level6Progress = 0;
+            const container = document.getElementById('bonus-container');
+            container.innerHTML = '';
+            
+            bonusQuestions.forEach((q, idx) => {
+                const qEl = document.createElement('div');
+                qEl.className = 'canva-card rounded-2xl p-6 mb-6';
+                qEl.innerHTML = `
+                    <div class="text-8xl mb-4 text-center blur-sm hover:blur-none transition-all cursor-pointer" id="bonus-reveal-${idx}">
+                        ${symbolData[q.symbol].emoji}
+                    </div>
+                    <p class="text-lg mb-4 text-center italic">${q.hint}</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        ${q.options.map(opt => `
+                            <button class="canva-button px-6 py-3 rounded-lg font-semibold text-lg" 
+                                    onclick="checkBonusAnswer(${idx}, '${opt}')">${opt}</button>
+                        `).join('')}
+                    </div>
+                    <div id="bonus-${idx}-feedback" class="min-h-12 text-center mt-4"></div>
+                `;
+                container.appendChild(qEl);
+            });
+        }
+
+        function checkBonusAnswer(qIdx, answer) {
+            const question = bonusQuestions[qIdx];
+            const correctName = symbolData[question.symbol].name;
+            const feedback = document.getElementById(`bonus-${qIdx}-feedback`);
+            
+            if (answer === correctName) {
+                feedback.innerHTML = `<p class="text-xl font-bold" style="color: #16a34a;">✓ Benar! ${correctName}!</p>`;
+                level6Progress++;
+                totalScore += 4;
+            } else {
+                feedback.innerHTML = `<p class="text-xl font-bold" style="color: #dc2626;">Bukan yang itu. Jawabannya: ${correctName}</p>`;
+            }
+            
+            if (level6Progress >= 3) {
+                setTimeout(() => {
+                    const nextBtn = document.getElementById('level6-next');
+                    nextBtn.disabled = false;
+                    nextBtn.classList.remove('opacity-50');
+                }, 500);
+            }
+        }
+
+        // Results
+        function showResults() {
+            document.querySelectorAll('[id$="-screen"]').forEach(el => el.classList.add('hidden'));
+            document.getElementById('results-screen').classList.remove('hidden');
+            
+            const scoreDisplay = document.getElementById('score-display');
+            const rankDisplay = document.getElementById('rank-display');
+            
+            scoreDisplay.textContent = totalScore + ' poin';
+            
+            let rank = '';
+            if (totalScore >= 90) rank = '⭐⭐⭐ Detektif Hebat';
+            else if (totalScore >= 75) rank = '⭐⭐ Detektif Cerdas';
+            else if (totalScore >= 60) rank = '⭐ Detektif Berkembang';
+            else rank = 'Ayo Berlatih Lagi!';
+            
+            rankDisplay.textContent = rank;
+        }
+
+        function selectFeeling(feeling) {
+            document.querySelectorAll('.feeling-btn').forEach(btn => {
+                btn.style.transform = btn.dataset.feeling === feeling ? 'scale(1.2)' : 'scale(1)';
+                btn.style.opacity = btn.dataset.feeling === feeling ? '1' : '0.5';
+            });
+        }
+
+        function selectSymbol(symbol) {
+            document.querySelectorAll('.symbol-recall-btn').forEach(btn => {
+                btn.style.transform = btn.dataset.symbol === symbol ? 'scale(1.2)' : 'scale(1)';
+                btn.style.opacity = btn.dataset.symbol === symbol ? '1' : '0.5';
+            });
+        }
+
+        function resetGame() {
+            currentLevel = 0;
+            level1Explored.clear();
+            level2Matches = 0;
+            level3Placed = 0;
+            level4Progress = 0;
+            level5Progress = 0;
+            level6Progress = 0;
+            totalScore = 0;
+            
+            document.querySelectorAll('button[id$="-next"]').forEach(btn => {
+                btn.disabled = true;
+                btn.classList.add('opacity-50');
+            });
+            
+            resetLevel1();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+ </body>
+</html>
